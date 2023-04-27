@@ -6,10 +6,16 @@
 </div>
 
 <!-- the [ ] syntax for passing input data to the component is the same as the [ ] syntax used to bind data to a html attribute i.e INPUT BINDING  -->
+
+<!-- $event - special variable for custom event binding -->
 <div class="courses">
-    <course-card [course]="coreCourse" (onCardClick)="onCardClick()"></course-card>
-    <course-card [course]="rxjsCourse"></course-card>
-    <course-card [course]="ngrxCourse"></course-card>
+
+    <!-- TODO: continue at ~3:00, *ngFor Auxillary Features -->
+    <course-card *ngFor="let course of courses" [course]="course" (courseSelected)="onCourseSelected($event)"></course-card>
+    
+    <!-- <course-card [course]="coreCourse" (courseSelected)="onCourseSelected($event)"></course-card>
+    <course-card [course]="rxjsCourse" (courseSelected)="onCourseSelected($event)"></course-card>
+    <course-card [course]="ngrxCourse" (courseSelected)="onCourseSelected($event)"></course-card> -->
 </div>
 
 
