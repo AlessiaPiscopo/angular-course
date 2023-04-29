@@ -23,7 +23,6 @@ export class AppComponent implements OnInit {
         private coursesService: CoursesService,
         @Inject(CONFIG_TOKEN) private config: AppConfig,
         private injector: Injector) {
-
     }
 
     ngOnInit() {
